@@ -19,4 +19,6 @@ api.put("/upload-avatar/:id", [md_auth.ensureAuth, md_upload_avatar], UserContro
 
 api.get("/get-avatar/:avatarName", UserController.getAvatar);
 
+api.put("/update-user/:id", [md_auth.ensureAuth], UserController.updateUser);
+
 module.exports = api;
